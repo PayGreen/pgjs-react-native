@@ -9,6 +9,7 @@ const HTML = `
 <html>
   <head>
     <title>MyWebiste - ECommerce</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--Paygreen Payement Integration-->
     <script
       defer
