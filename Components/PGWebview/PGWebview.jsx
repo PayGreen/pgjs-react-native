@@ -2,6 +2,8 @@ import { useRef, useState } from "react";
 import { Button, Text, View } from "react-native";
 import WebView from "react-native-webview";
 
+const PGJS_URL = "https://sb-pgjs.paygreen.fr/latest";
+
 const HTML = `
 <!DOCTYPE html>
 <html>
@@ -11,10 +13,10 @@ const HTML = `
     <script
       defer
       type="text/javascript"
-      src="https://sb-pgjs.paygreen.fr/latest/paygreen.min.js"
+      src="${PGJS_URL}/paygreen.min.js"
     ></script>
     <link
-      href="https://sb-pgjs.paygreen.fr/latest/paygreen.min.css"
+      href="${PGJS_URL}/paygreen.min.css"
       type="text/css"
       rel="stylesheet"
     />
@@ -74,9 +76,6 @@ window.paygreenjs.init({
   publicKey: 'pk_6018016627284e5d95d0e48103272a37',
   paymentOrderID: 'po_456e62b00c524fefaaeca5d1c9557a32',
   objectSecret: '4ed95608af348127',
-  modeOptions: {
-    authorizedInstrument: true,
-  },
   mode: 'payment',
   paymentMethod: 'restoflash',
 });
